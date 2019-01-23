@@ -6,9 +6,282 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("https://wallpaperplay.com/walls/full/9/4/2/202835.jpg"); */
+  background-color: #ef5350;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("https://fonts.googleapis.com/css?family=Staatliches");
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 750px;
+  /* border-color: red;
+  border-style: double; */
+}
+
+.sidebar {
+  background-color: #b61827;
+  width: 25%;
+  height: 750px;
+  opacity: 1;
+  color: white;
+  overflow-y: scroll;
+}
+
+.logo {
+  height: auto;
+  width: 85%;
+  /* border-style: double; */
+  /* border-color: white; */
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: inset;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  /* border-style: ridge;
+  border-color: white; */
+  margin: 5px;
+}
+
+.userInfo {
+  display: flex;
+
+  border-style: inset;
+  width: 88%;
+  height: 65px;
+  border-top-style: inset;
+}
+
+.userText {
+  display: flex;
+  /* border-top-style: inset; */
+  width: 88%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.recentCon {
+  display: flex;
+  /* border-style: inset; */
+  height: 70px;
+  width: 88%;
+  max-width: 265px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.convoCon {
+  display: flex;
+  /* border-style: inset; */
+  height: 100px;
+  width: 88%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.setlink {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.setlink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.darkMode {
+  background-color: #37474f;
+  color: white;
+}
+
+.bigArea {
+  width: 75%;
+  height: 700px;
+}
+
+.welCon {
+  font-family: "Staatliches";
+  display: flex;
+  wrap: wrap;
+}
+
+194 * {
+  font-family: Roboto;
+}
+
+.textfield {
+  border-color: #3f51b5;
+  border-left-style: solid;
+  border-right-style: none;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: medium;
+
+  width: 150px;
+  height: 28px;
+  color: white;
+  background-color: transparent;
+}
+
+.seticon {
+  height: 20px;
+  width: 20px;
+}
+
+.local-media {
+  display: flex;
+
+  border-color: black;
+  padding: 25px;
+}
+
+video {
+  margin-left: 15px;
+  border-radius: 15px;
+}
+
+.smallcam {
+  width: 202px;
+  height: 151px;
+  margin-right: 30px;
+  filter: inherit;
+}
+.smallcam:hover {
+  box-shadow: 5px 10px #ffcc00;
+}
+
+.none {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+}
+
+#mainvid {
+  height: 648px;
+  width: 864px;
+}
+
+.gray {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: grayscale();
+}
+
+.invert {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: invert(100%);
+}
+
+.blur {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: blur(5px);
+}
+
+.angel {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: brightness(200%) blur(2px);
+}
+
+.toon {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: saturate(8px);
+}
+
+.bizzaro {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: hue-rotate(90deg);
+}
+
+.sepia {
+  margin-top: 5px;
+  border-style: dashed;
+  border-color: black;
+  background-color: gray;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 15px;
+  filter: sepia(100%);
 }
