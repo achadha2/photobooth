@@ -18,7 +18,7 @@ export default class Webcam extends React.Component {
       localMediaContainer.appendChild(track.attach(), childNode);
       localMediaContainer.childNodes[0].id = "mainvid";
       document.getElementById("mainvid").className = "";
-      document.getElementById("mainvid").classList.add(this.props.effect);
+      document.getElementById("mainvid").classList.add(this.props.webeffect);
     });
   };
 
@@ -53,6 +53,7 @@ export default class Webcam extends React.Component {
     let video = document.querySelector("video");
     let mainVid = document.getElementById("mainvid");
     let audio = new Audio("shutter.mp3");
+    let effect = this.props.effect;
 
     setTimeout(function() {
       let mainVid = document.getElementById("mainvid");
@@ -64,9 +65,9 @@ export default class Webcam extends React.Component {
       }, 200);
     }, 4000);
 
-    ctxa.drawImage(video, 0, 0, canvasA.width, canvasA.height);
     setTimeout(function() {
-      ctxb.drawImage(video, 0, 0, canvasB.width, canvasB.height);
+      ctxa.filter = effect;
+      ctxa.drawImage(video, 0, 0, canvasA.width, canvasA.height);
       mainVid.classList.add("flash");
       audio.play();
       setTimeout(function() {
@@ -75,21 +76,34 @@ export default class Webcam extends React.Component {
     }, 5000);
 
     setTimeout(function() {
-      ctxc.drawImage(video, 0, 0, canvasC.width, canvasB.height);
+      ctxb.filter = effect;
+      ctxb.drawImage(video, 0, 0, canvasB.width, canvasB.height);
       mainVid.classList.add("flash");
       audio.play();
       setTimeout(function() {
         mainVid.classList.remove("flash");
       }, 200);
     }, 6000);
+
     setTimeout(function() {
-      ctxd.drawImage(video, 0, 0, canvasD.width, canvasB.height);
+      ctxc.filter = effect;
+      ctxc.drawImage(video, 0, 0, canvasC.width, canvasB.height);
       mainVid.classList.add("flash");
       audio.play();
       setTimeout(function() {
         mainVid.classList.remove("flash");
       }, 200);
     }, 7000);
+
+    setTimeout(function() {
+      ctxd.filter = effect;
+      ctxd.drawImage(video, 0, 0, canvasD.width, canvasB.height);
+      // mainVid.classList.add("flash");
+      // audio.play();
+      // setTimeout(function() {
+      //   mainVid.classList.remove("flash");
+      // }, 200);
+    }, 8000);
   };
 
   handleFlash = () => {
@@ -101,18 +115,6 @@ export default class Webcam extends React.Component {
       mainVid.classList.remove("flash");
     }, 200);
   };
-  // getCamera = () => {
-  //   navigator.getUserMedia(
-  //     {
-  //       video: true,
-  //       audio: false
-  //     },
-  //     function(stream) {
-  //       video.src = window.URL.createObjectURL(stream);
-  //       video.play();
-  //     }
-  //   );
-  // };
 
   handleDownload = e => {
     let id = e.target.id;
@@ -129,22 +131,6 @@ export default class Webcam extends React.Component {
     document.body.removeChild(tmpLink);
   };
 
-  // handleListen = () => {
-  //   let finalTranscript = "";
-  //   let interimTranscript = "";
-  //   recognition.start();
-  //   recognition.onresult = event => {
-  //     let interimTranscript = "";
-  //
-  //     for (let i = event.resultIndex; i < event.results.length; i++) {
-  //       const transcript = event.results[i][0].transcript;
-  //       if (event.results[i].isFinal) finalTranscript += transcript + " ";
-  //       else interimTranscript += transcript;
-  //     }
-  //     console.log(finalTranscript);
-  //   };
-  // };
-  countDown = () => {};
   render() {
     return (
       <div className="welCon">
@@ -154,29 +140,29 @@ export default class Webcam extends React.Component {
 
         <div>
           <canvas
-            className={this.props.effect}
-            onClick={this.handleDownload}
+            className="none"
+            onClick={this.props.openModal}
             id="myCanvasa"
             width="224"
             height="168"
           />
           <canvas
-            className={this.props.effect}
-            onClick={this.handleDownload}
+            className="none"
+            onClick={this.props.openModal}
             id="myCanvasb"
             width="224"
             height="168"
           />
           <canvas
-            className={this.props.effect}
-            onClick={this.handleDownload}
+            className="none"
+            onClick={this.props.openModal}
             id="myCanvasc"
             width="224"
             height="168"
           />
           <canvas
-            className={this.props.effect}
-            onClick={this.handleDownload}
+            className="none"
+            onClick={this.props.openModal}
             id="myCanvasd"
             width="224"
             height="168"

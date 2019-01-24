@@ -16,7 +16,12 @@ export default class BigAreaContainer extends React.Component {
   render() {
     return (
       <div>
-        <Webcam preview={this.props.preview} effect={this.props.effect} />
+        <Webcam
+          preview={this.props.preview}
+          effect={this.props.effect}
+          webeffect={this.props.webeffect}
+          openModal={this.props.openModal}
+        />
       </div>
     );
   }

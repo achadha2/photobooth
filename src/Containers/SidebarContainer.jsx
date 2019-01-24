@@ -52,7 +52,7 @@ export default class SidebarContainer extends React.Component {
       let con7 = document.getElementById("local-media7");
       let con8 = document.getElementById("local-media8");
 
-      con1.childNodes[0].classList.add("smallcam");
+      con1.childNodes[0].classList.add("smallcam", "none");
       con2.childNodes[0].classList.add("smallcam", "gray");
       con3.childNodes[0].classList.add("smallcam", "invert");
       con4.childNodes[0].classList.add("smallcam", "blur");
@@ -71,7 +71,7 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media1"
-          onClick={e => this.props.handleEffect(e, "none")}
+          onClick={e => this.props.handleEffect(e, "none", "none")}
           className="small-media"
         />
         <center>
@@ -79,7 +79,7 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media2"
-          onClick={e => this.props.handleEffect(e, "gray")}
+          onClick={e => this.props.handleEffect(e, "grayscale(100%)", "gray")}
           className="small-media"
         />
         <center>
@@ -87,7 +87,7 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media3"
-          onClick={e => this.props.handleEffect(e, "invert")}
+          onClick={e => this.props.handleEffect(e, "invert(100%)", "invert")}
           className="small-media"
         />
         <center>
@@ -95,7 +95,7 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media4"
-          onClick={e => this.props.handleEffect(e, "blur")}
+          onClick={e => this.props.handleEffect(e, "blur(5px)", "blur")}
           className="small-media"
         />
         <center>
@@ -103,7 +103,9 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media5"
-          onClick={e => this.props.handleEffect(e, "bizzaro")}
+          onClick={e =>
+            this.props.handleEffect(e, "hue-rotate(90deg)", "bizzaro")
+          }
           className="small-media"
         />
         <center>
@@ -111,7 +113,7 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media6"
-          onClick={e => this.props.handleEffect(e, "sepia")}
+          onClick={e => this.props.handleEffect(e, "sepia(400%)", "sepia")}
           className="small-media"
         />
         <center>
@@ -119,7 +121,9 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media7"
-          onClick={e => this.props.handleEffect(e, "saturate")}
+          onClick={e =>
+            this.props.handleEffect(e, "saturate(800%)", "saturate")
+          }
           className="small-media"
         />
         <center>
@@ -127,7 +131,9 @@ export default class SidebarContainer extends React.Component {
         </center>
         <div
           id="local-media8"
-          onClick={e => this.props.handleEffect(e, "contrast")}
+          onClick={e =>
+            this.props.handleEffect(e, "contrast(500%)", "contrast")
+          }
           className="small-media"
         />
         <center>
