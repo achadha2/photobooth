@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import SidebarContainer from "./Containers/SidebarContainer";
 import BigAreaContainer from "./Containers/BigAreaContainer";
 
