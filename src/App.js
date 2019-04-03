@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+
 import SidebarContainer from "./Containers/SidebarContainer";
 import BigAreaContainer from "./Containers/BigAreaContainer";
 
@@ -35,13 +35,42 @@ class App extends Component {
     modal2.style.display = "none";
   };
 
+  closeLibrary = () => {
+    let modal3 = document.getElementById("myModal3");
+    modal3.style.display = "none";
+  };
+
   openModal = e => {
+    this.closeLibrary();
     let modal = document.getElementById("myModal2");
     modal.style.display = "block";
     let canvas = document.getElementById("editing");
     let ctx = canvas.getContext("2d");
     let target = e.target;
     ctx.drawImage(target, 0, 0, canvas.width, canvas.height);
+  };
+
+  openLibrary = e => {
+    this.closeModal();
+    let modal = document.getElementById("myModal3");
+    modal.style.display = "block";
+    // let canvas = document.getElementById("editing");
+    // let ctx = canvas.getContext("2d");
+    // let target = e.target;
+    // ctx.drawImage(target, 0, 0, canvas.width, canvas.height);
+  };
+
+  favoritePic = e => {
+    let modal = document.getElementById("thumbs");
+    let canvas = document.createElement("CANVAS");
+    canvas.addEventListener("click", this.openModal);
+    modal.appendChild(canvas);
+    canvas.classList = "library";
+    // canvas.onClick = this.
+    let ctx = canvas.getContext("2d");
+    let target = e.target;
+    ctx.drawImage(target, 0, 0, canvas.width, canvas.height);
+    this.openLibrary();
   };
 
   handleDownload = e => {
@@ -69,14 +98,6 @@ class App extends Component {
     ctx.font = "30px Comic Sans MS";
     ctx.fillStyle = "red";
     ctx.fillText(text, 10, 50);
-  };
-
-  handleCanvasClick = e => {
-    console.log(e.clientX, e.clientY);
-    this.setState({
-      x: e.clientX,
-      y: e.clientY
-    });
   };
 
   render() {
@@ -117,7 +138,7 @@ class App extends Component {
                   id="editing"
                   width="448"
                   height="336"
-                  onClick={this.handleCanvasClick}
+                  onClick={this.favoritePic}
                 />
                 <br />
                 <button
@@ -140,6 +161,20 @@ class App extends Component {
             </div>
             <div class="modal-footer">
               <h3>Then download it!</h3>
+            </div>
+          </div>
+        </div>
+        <div id="myModal3" class="modal3">
+          <div class="modal-content2">
+            <div class="modal-header">
+              <span class="close" onClick={this.closeLibrary}>
+                &times;
+              </span>
+              <h2>Look at all the pics!</h2>
+            </div>
+            <div class="modal-body" id="thumbs" />
+            <div class="modal-footer">
+              <h3>Go take more!</h3>
             </div>
           </div>
         </div>

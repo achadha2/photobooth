@@ -72,6 +72,7 @@ export default class Webcam extends React.Component {
       audio.play();
       setTimeout(function() {
         mainVid.classList.remove("flash");
+        canvasA.style.display = "block";
       }, 200);
     }, 5000);
 
