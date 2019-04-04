@@ -29,18 +29,23 @@ code {
   flex-direction: row;
   width: 100%;
   height: 750px;
-  /* border-color: red;
+  padding: 0px;
+  margin: 0px;
+  /* border-color: black;
   border-style: double; */
+  height: 100vh;
 }
 
 .sidebar {
   background-color: #b61827;
   /* background-color: #37474f; */
-  width: 25%;
-  height: 750px;
+  width: 30%;
+  height: 100%;
   opacity: 1;
   color: white;
   overflow-y: scroll;
+  padding: 0px;
+  margin: 0px;
 }
 
 .logo {
