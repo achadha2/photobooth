@@ -162,7 +162,6 @@ code {
 
 .local-media {
   display: flex;
-
   border-color: black;
   padding: 25px;
 }

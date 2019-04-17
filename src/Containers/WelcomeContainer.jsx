@@ -181,29 +181,29 @@ export default class Webcam extends React.Component {
             className="none"
             onClick={this.props.openModal}
             id="myCanvasa"
-            width="202"
-            height="151"
+            width="182"
+            height="136"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasb"
-            width="202"
-            height="151"
+            width="182"
+            height="136"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasc"
-            width="202"
-            height="151"
+            width="182"
+            height="136"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasd"
-            width="202"
-            height="151"
+            width="182"
+            height="136"
           />
         </div>
       </div>
