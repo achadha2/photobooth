@@ -24,6 +24,11 @@ class App extends Component {
       effect: effect,
       webeffect: webeffect
     });
+    console.log(e.target);
+    let activeEffect = e.target;
+    activeEffect.classList.add("active");
+    // target = getEle;
+
     // debugger;
   };
 

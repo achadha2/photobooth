@@ -1,9 +1,17 @@
 import React from "react";
-import SpeechRecognition from "react-speech-recognition";
+import { timer } from "rxjs";
+import { take } from "rxjs/operators";
+import trigger from "./camera.png";
+// import logo from "./logo.png";
+
+// import SpeechRecognition from "react-speech-recognition";
 const { createLocalVideoTrack } = require("twilio-video");
 // const recognition = new webkitSpeechRecognition();
 
 export default class Webcam extends React.Component {
+  state = {
+    counter: ""
+  };
   whatRender = () => {
     createLocalVideoTrack({
       audio: false,
@@ -22,17 +30,41 @@ export default class Webcam extends React.Component {
     });
   };
 
+  // callState = () => {
+  //   this.setState({
+  //     counter: 2
+  //   });
+  // };
+
+  // counterCall = () => {
+  //   let counter = 3;
+  //   timer(1000, 1000)
+  //     .pipe(take(3))
+  //     .subscribe(it => {
+  //       return it;
+  //     });
+  // };
+
   snapshot = () => {
     let msg3 = new SpeechSynthesisUtterance("Three!");
-    let msg2 = new SpeechSynthesisUtterance("TWO!");
+    let msg2 = new SpeechSynthesisUtterance("Two!");
     let msg1 = new SpeechSynthesisUtterance("One!");
     let msg0 = new SpeechSynthesisUtterance("SMILE!");
 
     window.speechSynthesis.speak(msg3);
+    this.setState({
+      counter: 3
+    });
+
+    // this.counterCall();
 
     setTimeout(function() {
       window.speechSynthesis.speak(msg2);
     }, 1000);
+
+    // setTimeout(function() {
+    //   this.callState();
+    // }, 1000);
 
     setTimeout(function() {
       window.speechSynthesis.speak(msg1);
@@ -135,8 +167,14 @@ export default class Webcam extends React.Component {
   render() {
     return (
       <div className="welCon">
-        <div onClick={this.snapshot} id="local-media" className="local-media">
-          {this.whatRender()}
+        <div className="camwrap">
+          // <div className="testdiv">{this.counterCall}</div>
+          <div className="camclick">
+            <img src={trigger} alt="logo" />
+          </div>
+          <div onClick={this.snapshot} id="local-media" className="local-media">
+            {this.whatRender()}
+          </div>
         </div>
 
         <div>

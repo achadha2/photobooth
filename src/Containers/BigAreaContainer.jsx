@@ -1,8 +1,8 @@
 import React from "react";
-import Camera from "./Camera";
-import SuggestCont from "./SuggestContainer";
+// import Camera from "./Camera";
+// import SuggestCont from "./SuggestContainer";
 import Webcam from "./WelcomeContainer";
-import VideoCom from "../Components/VideoCom";
+// import VideoCom from "../Components/VideoCom";
 
 export default class BigAreaContainer extends React.Component {
   renderPreview = () => {
