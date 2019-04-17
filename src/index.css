@@ -39,7 +39,7 @@ code {
 
 .sidebar {
   /* background-color: #b61827; */
-  background-color: #f2f2f2;
+  background-color: #d1d1d1;
   /* background-color: #37474f; */
   width: 30%;
   height: 100%;
@@ -162,7 +162,7 @@ code {
 
 .local-media {
   display: flex;
-  border-color: black;
+  border-color: white;
   padding: 25px;
 }
 
@@ -230,6 +230,12 @@ video {
 #mainvid {
   height: 648px;
   width: 864px;
+  /* height: device-width */
+  border-radius: 0px;
+  border-width: 20px;
+  border-bottom-width: 40px;
+  /* box-sizing: border-box; */
+  border-color: white;
 }
 
 .gray {
@@ -577,6 +583,7 @@ video {
   border-color: white;
   border-width: 20px;
   border-style: solid;
+  box-sizing: border-box;
   /* border-bottom-width: 30px; */
 }
 
@@ -587,6 +594,7 @@ video {
   border-color: white;
   border-width: 20px;
   border-style: solid;
+  box-sizing: border-box;
 }
 
 #myCanvasc {
@@ -596,6 +604,7 @@ video {
   border-color: white;
   border-width: 20px;
   border-style: solid;
+  box-sizing: border-box;
 }
 
 #myCanvasd {
@@ -605,6 +614,7 @@ video {
   border-color: white;
   border-width: 20px;
   border-style: solid;
+  box-sizing: border-box;
 }
 
 @keyframes example {
