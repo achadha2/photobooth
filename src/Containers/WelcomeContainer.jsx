@@ -168,7 +168,6 @@ export default class Webcam extends React.Component {
     return (
       <div className="welCon">
         <div className="camwrap">
-          // <div className="testdiv">{this.counterCall}</div>
           <div className="camclick">
             <img src={trigger} alt="logo" />
           </div>
@@ -182,29 +181,29 @@ export default class Webcam extends React.Component {
             className="none"
             onClick={this.props.openModal}
             id="myCanvasa"
-            width="224"
-            height="168"
+            width="202"
+            height="151"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasb"
-            width="224"
-            height="168"
+            width="202"
+            height="151"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasc"
-            width="224"
-            height="168"
+            width="202"
+            height="151"
           />
           <canvas
             className="none"
             onClick={this.props.openModal}
             id="myCanvasd"
-            width="224"
-            height="168"
+            width="202"
+            height="151"
           />
         </div>
       </div>

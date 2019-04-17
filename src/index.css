@@ -225,6 +225,7 @@ video {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 15px;
+  /* transform: rotate(20deg); */
 }
 
 #mainvid {
@@ -568,6 +569,43 @@ video {
   margin: 10px;
   width: 230px;
   height: 174px;
+}
+
+#myCanvasa {
+  border-radius: 0px;
+  /* margin-top: 10px; */
+  transform: rotate(-15deg);
+  border-color: white;
+  border-width: 20px;
+  border-style: solid;
+  /* border-bottom-width: 30px; */
+}
+
+#myCanvasb {
+  border-radius: 0px;
+  /* margin-top: 10px; */
+  transform: rotate(15deg);
+  border-color: white;
+  border-width: 20px;
+  border-style: solid;
+}
+
+#myCanvasc {
+  border-radius: 0px;
+  /* margin-top: 10px; */
+  transform: rotate(-15deg);
+  border-color: white;
+  border-width: 20px;
+  border-style: solid;
+}
+
+#myCanvasd {
+  border-radius: 0px;
+  /* margin-top: 10px; */
+  transform: rotate(15deg);
+  border-color: white;
+  border-width: 20px;
+  border-style: solid;
 }
 
 @keyframes example {
