@@ -119,13 +119,13 @@ class App extends Component {
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>
-              <h1>Welcome to SNAP!</h1>
+              <h1>Welcome to SNAP</h1>
             </p>
-            <p>Step 1: Choose a fun effect!</p>
+            <p>Step 1: Choose a fun effect</p>
             <p>Step 2: Put on your cheesiest smile</p>
-            <p>Step 3: Click the big center webcam to start SNAPping</p>
+            <p>Step 3: Click the big center webcam to start SNAP-ping</p>
             <p>Step 4: Watch as every second a pic is taken of you</p>
-            <p>Step 5: Click on the images to download them!</p>
+            <p>Step 5: Click on the images to add text or download</p>
           </div>
         </div>
         <div id="myModal2" class="modal2">

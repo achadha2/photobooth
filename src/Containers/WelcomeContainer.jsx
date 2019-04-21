@@ -9,9 +9,6 @@ const { createLocalVideoTrack } = require("twilio-video");
 // const recognition = new webkitSpeechRecognition();
 
 export default class Webcam extends React.Component {
-  state = {
-    counter: ""
-  };
   whatRender = () => {
     createLocalVideoTrack({
       audio: false,
@@ -50,16 +47,20 @@ export default class Webcam extends React.Component {
     let msg2 = new SpeechSynthesisUtterance("Two!");
     let msg1 = new SpeechSynthesisUtterance("One!");
     let msg0 = new SpeechSynthesisUtterance("SMILE!");
+    let countDiv = document.getElementById("countdown");
+    // let countBack = document.getElementById("countdownback");
 
     window.speechSynthesis.speak(msg3);
-    this.setState({
-      counter: 3
-    });
+    countDiv.innerHTML = "3";
+    // countBack.innerHTML = "3";
+    countDiv.classList.add("zoomAnimation");
 
     // this.counterCall();
 
     setTimeout(function() {
       window.speechSynthesis.speak(msg2);
+      countDiv.innerHTML = "2";
+      // countBack.innerHTML = "2";
     }, 1000);
 
     // setTimeout(function() {
@@ -68,10 +69,13 @@ export default class Webcam extends React.Component {
 
     setTimeout(function() {
       window.speechSynthesis.speak(msg1);
+      countDiv.innerHTML = "1";
     }, 2000);
 
     setTimeout(function() {
       window.speechSynthesis.speak(msg0);
+      countDiv.innerHTML = "";
+      countDiv.classList.remove("zoomAnimation");
     }, 3000);
 
     let canvasA = document.getElementById("myCanvasa");
@@ -171,6 +175,8 @@ export default class Webcam extends React.Component {
           <div className="camclick">
             <img src={trigger} alt="logo" />
           </div>
+          <div className="countdown" id="countdown" />
+
           <div onClick={this.snapshot} id="local-media" className="local-media">
             {this.whatRender()}
           </div>

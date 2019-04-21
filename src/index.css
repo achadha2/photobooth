@@ -185,13 +185,41 @@ code {
   left: 50%;
   top: 80%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: white;
+  /* font-size: 20px; */
+  /* color: white; */
   z-index: 1;
-  filter: invert(65%);
+  filter: invert(50%);
   opacity: 60%;
   pointer-events: none;
 }
+
+.countdown {
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 250px;
+  color: white;
+  z-index: 2;
+  /* filter: invert(65%); */
+  opacity: 60%;
+  pointer-events: none;
+  /* font-family: "Indie Flower", cursive; */
+  font-family: "Dancing Script", cursive;
+  /* font-family: "Permanent Marker", cursive; */
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.zoomAnimation {
+  -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3
+    both;
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3 both;
+}
+/* #countdownback {
+  font-size: 270px;
+  color: black;
+  z-index: 1;
+} */
 
 video {
   margin-left: 15px;
@@ -204,21 +232,37 @@ video {
   height: 151px;
   margin-right: 30px;
   filter: inherit;
-  box-sizing: border-box;
+  border-color: black;
+  border-width: 2px;
+  /* box-sizing: border-box; */
+  /* background-color: #fff;
+  box-shadow: 120px 80px 40px 20px #0ff; */
 }
 
 .active {
-  border-width: 7px;
+  /* border-style: double; */
+  /* border-color: red; */
+}
+
+.camBox:hover {
+  /* background-color: #fff; */
+  /* box-shadow: 120px 80px 40px 20px #0ff; */
+  border-color: purple;
+  border-width: 5px;
 }
 .smallcam:hover {
   /* box-shadow: 5px 10px #ffcc00; */
-  border-width: 7px;
+  /* border-color: black; */
+  /* background-color: #fff; */
+  /* box-shadow: 120px 80px 40px 20px #0ff; */
+  /* border-width: 2px; */
 }
 
 .none {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -241,7 +285,8 @@ video {
 .gray {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -255,6 +300,7 @@ video {
   margin-top: 5px;
   border-style: solid;
   border-color: white;
+  border-width: 2px;
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -276,7 +322,8 @@ video {
 .blur {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -289,7 +336,8 @@ video {
 .angel {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -302,7 +350,8 @@ video {
 .toon {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -315,7 +364,8 @@ video {
 .bizzaro {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black; */
+  /* border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -328,7 +378,8 @@ video {
 .sepia {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -341,7 +392,8 @@ video {
 .saturate {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -354,7 +406,8 @@ video {
 .contrast {
   margin-top: 5px;
   border-style: solid;
-  border-color: black;
+  /* border-color: black;
+  border-width: 2px; */
   background-color: gray;
   align-items: center;
   margin-left: 10px;
@@ -382,7 +435,7 @@ video {
 .modal {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -425,7 +478,7 @@ video {
 .modal2 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -545,8 +598,8 @@ video {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  /* background-color: rgb(0, 0, 0); /* Fallback color */
+  */background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .buttons2 {
@@ -635,5 +688,30 @@ video {
   }
   100% {
     background-color: red;
+  }
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
