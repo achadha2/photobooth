@@ -9,6 +9,10 @@ const { createLocalVideoTrack } = require("twilio-video");
 // const recognition = new webkitSpeechRecognition();
 
 export default class Webcam extends React.Component {
+  state = {
+    canvasElements: ["myCanvasa", "myCanvasb", "myCanvasc", "myCanvasd"]
+  };
+
   whatRender = () => {
     createLocalVideoTrack({
       audio: false,
@@ -176,12 +180,11 @@ export default class Webcam extends React.Component {
             <img src={trigger} alt="logo" />
           </div>
           <div className="countdown" id="countdown" />
-
+          <canvas id="c" />
           <div onClick={this.snapshot} id="local-media" className="local-media">
             {this.whatRender()}
           </div>
         </div>
-
         <div>
           <canvas
             className="none"

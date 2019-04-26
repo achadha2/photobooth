@@ -27,13 +27,21 @@ code {
 
 .app {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 750px;
   padding: 0px;
   margin: 0px;
   /* border-color: black;
   border-style: double; */
+  height: 100vh;
+}
+
+.innerapp {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 750px; */
   height: 100vh;
 }
 
@@ -196,18 +204,24 @@ code {
 .countdown {
   position: absolute;
   left: 45%;
-  top: 25%;
+  top: 20%;
   transform: translate(-50%, -50%);
   font-size: 250px;
   color: white;
   z-index: 2;
-  /* filter: invert(65%); */
   opacity: 60%;
   pointer-events: none;
-  /* font-family: "Indie Flower", cursive; */
-  font-family: "Dancing Script", cursive;
-  /* font-family: "Permanent Marker", cursive; */
+  font-family: "Baloo", cursive;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  opacity: 0.7;
+}
+
+#c {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .zoomAnimation {
@@ -251,6 +265,7 @@ video {
   border-width: 5px;
 }
 .smallcam:hover {
+  border-color: blue;
   /* box-shadow: 5px 10px #ffcc00; */
   /* border-color: black; */
   /* background-color: #fff; */
@@ -519,6 +534,20 @@ video {
 } */
 
 /* Add Animation */
+
+.modal4 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
@@ -558,7 +587,7 @@ video {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #b61827;
+  background-color: #50c878;
   color: white;
 }
 
@@ -568,7 +597,7 @@ video {
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #b61827;
+  background-color: #50c878;
   color: white;
 }
 
