@@ -3,6 +3,14 @@ import SidebarContainer from "./Containers/SidebarContainer";
 import BigAreaContainer from "./Containers/BigAreaContainer";
 
 class App extends Component {
+render() {
+  return (
+    <div>
+      YOLO
+    <div>
+  )
+}
+
   //------------------------------------
   // state = {
   //   preview: true,
