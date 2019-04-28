@@ -5,8 +5,10 @@ import BigAreaContainer from "./Containers/BigAreaContainer";
 class App extends Component {
 render() {
   return (
-    <div>
-      YOLO
+    <div className="app">
+      <SidebarContainer />
+      <CameraContainer />
+      <PhotoContainer />
     <div>
   )
 }
