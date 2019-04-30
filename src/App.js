@@ -1,14 +1,29 @@
 import React, { Component } from "react";
 import SidebarContainer from "./Containers/SidebarContainer";
 import CameraContainer from "./Containers/CameraContainer";
+import PhotoContainer from "./Containers/PhotoContainer";
 
 class App extends Component {
+  state = {
+    preview: true,
+    effect: "none",
+    webeffect: "none",
+    x: 0,
+    y: 0
+  };
+
   render() {
     return (
       <div className="app">
-        <SidebarContainer />
-        <CameraContainer />
-        <PhotoContainer />
+        <div className="sidebarContainer">
+          <SidebarContainer />
+        </div>
+        <div className="cameraContainer">
+          <CameraContainer />
+        </div>
+        <div className="photoContainer">
+          <PhotoContainer />
+        </div>
       </div>
     );
   }
@@ -16,20 +31,10 @@ class App extends Component {
 
 //------------------------------------
 // state = {
-//   preview: true,
-//   effect: "none",
-//   webeffect: "none",
-//   x: 0,
-//   y: 0
+
 // };
 //
-// previewCam = () => {
-//   console.log("yeas");
-//   this.setState({
-//     preview: !this.state.preview
-//   });
-//   console.log(this.state.preview);
-// };
+
 //
 // handleEffect = (e, effect, webeffect) => {
 //   this.setState({
