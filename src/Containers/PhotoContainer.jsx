@@ -2,7 +2,7 @@ import React from "react";
 
 class PhotoContainer extends React.Component {
   render() {
-    return;
+    return <div> PhotoContainer</div>;
   }
 }
 
