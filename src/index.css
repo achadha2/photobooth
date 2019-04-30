@@ -191,7 +191,7 @@ code {
 .camclick {
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 85%;
   transform: translate(-50%, -50%);
   /* font-size: 20px; */
   /* color: white; */
@@ -204,7 +204,7 @@ code {
 .countdown {
   position: absolute;
   left: 45%;
-  top: 20%;
+  top: 30%;
   transform: translate(-50%, -50%);
   font-size: 250px;
   color: white;
