@@ -29,7 +29,6 @@ code {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-auto-rows: 1fr;
-
   /* display: flex;
   flex-direction: row;
   width: 100%;
@@ -40,13 +39,20 @@ code {
 }
 
 .sidebarContainer {
-  margin-left: 5px;
+  display: flex;
   grid-column: 1;
+  background-color: #d1d1d1;
+  opacity: 1;
+  color: #302f2f;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .cameraContainer {
   grid-column: 2;
 }
+
+/* Sidebar CSS */
 
 .smallcam {
   position: static;
@@ -54,92 +60,66 @@ code {
   height: 151px;
   margin-right: 30px;
   filter: inherit;
+  border-style: solid;
   border-color: black;
   border-width: 2px;
+  margin-left: 7%;
+  border-radius: 10px;
+}
+
+.smallcam:hover {
+  border-color: red;
+  border-width: 2px;
+}
+
+.sidebar {
+  overflow-y: scroll;
+}
+
+.camBox:hover {
+  border-color: purple;
+  border-width: 5px;
+}
+
+/* CSS for Camera */
+
+.camclick {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: invert(50%);
+  opacity: 60%;
+  pointer-events: none;
+}
+
+.local-media {
+  /* margin-top: 5%; */
+  display: flex;
+  border-color: white;
+  padding: 25px;
+}
+
+#mainvid {
+  height: 648px;
+  width: 864px;
+  border-radius: 0px;
+  border-width: 20px;
+  border-bottom-width: 40px;
+  border-color: white;
+  grid: 1;
+}
+
+.camwrap {
+  display: grid;
+  grid-template: 1fr/1fr;
+  background-color: black;
 }
 
 /* CSS for older variant */
 
-/* .sidebar {
-  background-color: #d1d1d1;
-  width: 30%;
-  height: 100%;
-  opacity: 1;
-  color: #302f2f;
-  overflow-y: scroll;
-  padding: 0px;
-  margin: 0px;
-} */
-
-/* .logo {
-  height: auto;
-  width: 85%;
-  margin-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: inset;
-} */
-
-/* .avatar {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-
-.userInfo {
-  display: flex;
-  border-style: inset;
-  width: 88%;
-  height: 65px;
-  border-top-style: inset;
-}
-
-.userText {
-  display: flex;
-  width: 88%;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-size: 20px;
-  text-align: left;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.recentCon {
-  display: flex;
-  height: 70px;
-  width: 88%;
-  max-width: 265px;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.convoCon {
-  display: flex;
-  height: 100px;
-  width: 88%;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.setlink {
-  font-size: 16px;
-  text-align: center;
-  font-weight: 800;
-}
-
-.setlink:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.darkMode {
-  background-color: #37474f;
-  color: white;
-}
-
-.bigArea {
+/* .bigArea {
   width: 75%;
   height: 700px;
 }
@@ -148,7 +128,7 @@ code {
   font-family: "Staatliches";
   display: flex;
   wrap: wrap;
-} */
+}  */
 
 /* .textfield {
   border-color: #3f51b5;
@@ -209,23 +189,6 @@ code {
 video {
   margin-left: 15px;
   border-radius: 15px;
-}
-
-.smallcam {
-  position: static;
-  width: 202px;
-  height: 151px;
-  margin-right: 30px;
-  filter: inherit;
-  border-color: black;
-  border-width: 2px;
-
-}
-
-
-.camBox:hover {
-  border-color: purple;
-  border-width: 5px;
 }
 
 .none {

@@ -37,6 +37,7 @@ export default class SidebarContainer extends React.Component {
   render() {
     return (
       <div className="sidebar">
+        <div className="sidebarEmpty" />
         <center>
           <h2>Effects:</h2>
         </center>
@@ -83,12 +84,13 @@ export default class SidebarContainer extends React.Component {
         />
         <center>
           <h3>Bizzaro</h3>
+
+          <div
+            id="local-media6"
+            onClick={e => this.props.handleEffect(e, "sepia(400%)", "sepia")}
+            className="small-media"
+          />
         </center>
-        <div
-          id="local-media6"
-          onClick={e => this.props.handleEffect(e, "sepia(400%)", "sepia")}
-          className="small-media"
-        />
         <center>
           <h3>Sepia</h3>
         </center>
