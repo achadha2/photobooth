@@ -180,7 +180,7 @@ export default class Webcam extends React.Component {
             <img src={trigger} alt="logo" />
           </div>
           <div className="countdown" id="countdown" />
-          <canvas id="c" />
+
           <div onClick={this.snapshot} id="local-media" className="local-media">
             {this.whatRender()}
           </div>
