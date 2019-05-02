@@ -50,6 +50,7 @@ code {
 
 .cameraContainer {
   grid-column: 2;
+  background-color: black;
 }
 
 /* Sidebar CSS */
@@ -95,26 +96,27 @@ code {
 }
 
 .local-media {
-  /* margin-top: 5%; */
+  margin-top: 5%;
   display: flex;
   border-color: white;
   padding: 25px;
+  border-width: 50px;
 }
 
 #mainvid {
   height: 648px;
   width: 864px;
-  border-radius: 0px;
-  border-width: 20px;
+  border-color: white;
+  border-width: 100px;
   border-bottom-width: 40px;
   border-color: white;
   grid: 1;
+  margin-left: 20px;
 }
 
 .camwrap {
   display: grid;
   grid-template: 1fr/1fr;
-  background-color: black;
 }
 
 /* CSS for older variant */
